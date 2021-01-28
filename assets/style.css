@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    font-family: 'Roboto Condensed', sans-serif;
+    flex-direction: column;
+}
+
+/*     =======    circle   ====== */
+.circle{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background: #BCEDFF;
+    clip-path: circle(1200px at 50% 0);
+    /* transform: translateY(100%); */
+}
+/* a{
+    margin: 20px 30px;
+} */
+
+/*      =======  Menu  =====                */
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 40px;
+}
+header a{
+    text-decoration: none;
+}
+header .logo{
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    font-size: 3em;
+    color: #111;
+}
+header .logo span{
+    color:#FF1057;
+}
+header ul{
+    position: relative;
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+header ul li{
+    list-style: none;
+    margin: 20px 40px;
+}
+header ul a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* header ul i{
+    margin-top: -10px;
+    padding: 10px;
+} */
+
+
+
+/*   =======   title   =======         */
+
+
+.title{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+/*    =======   input box   ======    */
+.inputBox{
+    display: flex;
+    margin-top: 50px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+}
+.inputBox .inputValue{
+    width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin: 40px;
+    outline: none;
+    
+}
+
+/*    ====== buttons  =======       */
+.buttons{
+    display: flex;
+    position: relative;
+    width: 35%;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 32%;
+}
+.buttons a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: flex;
+    position: relative;
+    border: 1px solid #000;
+    outline: none;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #4096FE;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 400;
+}
+
+
+/*     =======   output    ====== */
+.result{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+.result p{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 40px 10px 60px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background: #000;
+}
+/*   ======    Range    ======    */
+.range{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-top: 10%;
+}
+.range p{
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.range .underWeight{
+    width: 160px;
+    background: #FFCC00;
+    padding: 20px;
+}
+.range .normal{
+    width: 160px;
+    padding: 20px;
+    background: #076C00;
+}
+.range .overWeight{
+    width: 160px;
+    padding: 20px;
+    background: #FF6E00;
+}
+.range .obese{
+    width: 160px;
+    padding: 20px;
+    background: #D60202;
+}
+
+
+
+
+/*     for screen size less than 635px     */
+
+@media (max-width: 635px)
+{
+    header .navigation{
+        display: none;
+    }
+    header .navigation.active{
+        width: 25%;
+        height: calc(45% - 55px);
+        position: fixed;
+        top: 55px;
+        right: 0px;
+        display: flex;
+        /* justify-content: center; */
+        /* align-items: center; */
+        flex-direction: column;
+        background: #fff;
+        color: #000;
+        z-index: 1;
+        /* transform: translateX(-100%); */
+    }
+
+    .menuToggle{
+        position: relative;
+        top: 15px;
+        width: 40px;
+        height: 40px;
+        background: url(../menu.png);
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .menuToggle.active{
+        background: url(../close.png);
+        background-size: 35px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+
+
+
+

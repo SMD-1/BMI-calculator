@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="circle"></div>
+
+    <!--          =========  Menu  ========              -->
+    <header>
+        <a href="#" class="logo">DS<span>.</span></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        
+        <ul class="navigation">
+            <li><a href="#" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#" onclick="toggleMenu();">About</a></li>
+            <li><a href="./assets/contact.html" onclick="toggleMenu();">Contact</a></li>
+            <li><a href="#" onclick="toggleMenu();">More </a><i class="fa fa-caret-down" aria-hidden="true"></i></li>
+        </ul>
+    </header>
+    
+<!--     content      -->
+    <div class="content">
+
+        <!--    ====  title ====   -->
+        <div class="title">
+            <p>BMI (BODY MASS INDEX)</p>
+        </div>
+
+        <!--     ===== input box  =====     -->
+        <div class="inputBox">
+            <input type="number" placeholder="Weight(in kg)..." class="inputValue">
+            <input type="number" placeholder="Height(in m)..." class="inputValue">
+        </div>
+
+        <!--    buttons     -->
+        <div class="buttons">
+            <a href="#">Calculate</a>
+            <a href="#">Reset</a>
+        </div>
+
+        <!--      output     -->
+        <div class="result">
+            <p>Your BMI   :  <span id="result">XX.XX</span></p>
+        </div>
+
+
+    </div>
+
+    <!--      Range      -->
+    <div class="range">
+        <div class="underWeight">
+            <p>Under Weight</p>
+            <p> < 18.5</p>
+        </div>
+        <div class="normal">
+            <p>Normal</p>
+            <p> 18.5 - 25.0 </p>
+        </div><div class="overWeight">
+            <p>Over Weight</p>
+            <p>25.1 - 30.0</p>
+        </div>
+        <div class="obese">
+            <p>Obese</p>
+            <p> > 30.0</p>
+        </div>
+    </div>
+
+
+
+   
+
+    <script src="app.js"></script>
+</body>
+</html>

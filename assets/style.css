@@ -186,6 +186,11 @@ header ul a{
 
 @media (max-width: 635px)
 {
+    .circle{
+        clip-path: circle(400px at 50% 0);
+        transition: 0.5s;
+        transform: translateY(-20%);
+    }
     header .navigation{
         display: none;
     }
@@ -194,33 +199,84 @@ header ul a{
         height: calc(45% - 55px);
         position: fixed;
         top: 55px;
-        right: 0px;
+        right: 0;
         display: flex;
-        /* justify-content: center; */
-        /* align-items: center; */
         flex-direction: column;
         background: #fff;
-        color: #000;
-        z-index: 1;
-        /* transform: translateX(-100%); */
     }
 
     .menuToggle{
         position: relative;
-        top: 15px;
-        width: 40px;
-        height: 40px;
+        top: 10px;
+        width: 35px;
+        height: 35px;
         background: url(../menu.png);
         background-repeat: no-repeat;
         cursor: pointer;
+        animation: ease-in-out;
     }
 
     .menuToggle.active{
         background: url(../close.png);
         background-size: 35px;
-        background-repeat: no-repeat;
         background-position: center;
     }
+
+    .inputBox{
+        display: block;
+        margin-top: 50px;
+        height: 45px;
+    }
+
+    .inputBox .inputValue{
+        width: 300px;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        margin: 20px auto;
+        outline: none;
+        display: flex;
+    }
+
+    .buttons{
+        display: block;
+        position: relative;
+        width: 30%;
+        height: 30px;
+        margin-top: 130px;
+        margin-left: 35%;
+    }
+
+    .buttons a{
+        position: relative;
+        padding: 10px 15px;
+        margin: 30px auto;
+        background: #4096FE;
+        border-radius: 8px;
+    }
+
+    .result{
+        margin-top: 25%;
+    }
+
+    .range{
+        display: block;
+        margin: 10% auto;
+        height: 50px;
+    }
+    .range .underWeight{
+        width: 250px;
+    }
+    .range .normal{
+        width: 250px;
+    }
+    .range .overWeight{
+        width: 250px;
+    }
+    .range .obese{
+        width: 250px;
+    }
+
 }
 
 
